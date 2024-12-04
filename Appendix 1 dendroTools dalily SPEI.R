@@ -27,7 +27,7 @@ Prec <- read.table("my_chron_Psum.csv", sep = ",", header = TRUE)
 # All credits go to the authors of SPEI R package (https://cran.r-project.org/web/packages/SPEI/index.html)
 HargreavesPET_daily <- function(date, tavg, tdif, lat){
   
-  doy <- day(date)
+  doy <- yday(date)
   phi = pi/180 * lat
   delta = 0.409*sin(2*pi/366*doy-1.39)
   dr = 1 + 0.033*cos(2*pi/365*doy)
